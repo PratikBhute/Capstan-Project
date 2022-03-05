@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Costumar Details</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>Enter Costumar Details</h1>
+		<hr>
+		<h2>Save Costumar</h2>
+		<form action="#" th:action="@{/saveCostumar}" th:object="${costumar}"
+			method="POST">
+
+			<input type="text" th:field="*{firstName}"
+				placeholder="Costumar First Name" class="form-control mb-4 col-4">
+
+			<input type="text" th:field="*{lastName}"
+				placeholder="Costumar Last Name" class="form-control mb-4 col-4">
+
+			<input type="text" th:field="*{email}"
+			 placeholder="Costumar email"     class="form-control mb-4 col-4">
+				
+		    <input type="text" th:field="*{phone}"
+				   placeholder="Costumar phone" class="form-control mb-4 col-4">
+ 
+			<button type="Submit" class="bnt btn-info col-2">Save Costumar</button>
+
+		</form>
+		<hr>
+		<a th:href ="@{/}"/a>
+		<a  th:href ="@{/}"class="btn btn-primary btn-sm mb-3">Back to list</a>
+	</div>
+
+</body>
+</html>

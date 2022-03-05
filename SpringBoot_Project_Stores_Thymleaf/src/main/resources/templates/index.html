@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Costomar Details</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+ crossorigin="anonymous">
+ 
+</head>
+<body>
+<p style="background-image: url('img_girl.jpg');"> 	
+<div class="container my-2">
+
+<h1>Costumar List</h1>
+<a th:href ="@{/showNewCostumarform}" class="btn btn-primary btn-sm mb-3">Add Costumar</a>
+
+
+ <table border="1" class="table table-striped table-responsive-md">
+	<thead>
+		<tr>
+			<th>Costumar First Name</th>
+			<th>Costumar Last Name</th>
+			<th>Costumar Email Add</th>
+			<th>Costumar Phone</th>
+			<th>    Action    </th>
+		</tr>
+	</thead> 
+ 	<tbody>	
+ 		<tr th:each="employee : ${listCostumar}">   <!-- for each loop for traversing list -->
+ 			
+ 			<td th:text="${costumar.firstName}"></td>
+ 			<td th:text="${costumar.lastName}"></td>
+ 			<td th:text="${costumar.email}"></td>
+ 			<td th:text="${costumar.phone}"></td>
+ 			
+		
+ 			
+ 			<!-- update and delete on id basis Button format -->
+ 			
+ 			<td> <a th:href ="@{/showFormforUpdate/{id}(id=${costumar.id})}" class="btn btn-primary"> Update 
+ 				<a th:href ="@{/deleteCostumar/{id}(id=${costumar.id})}" class="btn btn-danger">Delete</a>
+ 			</td>
+ 			
+ 			
+ 		</tr>
+ 	</tbody>
+ </table>
+ 
+</div>
+
+</body>
+</html>

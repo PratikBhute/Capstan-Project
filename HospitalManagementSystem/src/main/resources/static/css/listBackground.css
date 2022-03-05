@@ -1,0 +1,7 @@
+@charset "ISO-8859-1";
+.backImage{
+	background-image: url("/img/abc.jpg");
+	background-repeat: no-repeat;
+	width: auto;
+	height: auto;
+}

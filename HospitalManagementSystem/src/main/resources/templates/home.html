@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link th:href="@{css/style.css}" rel="stylesheet"></link>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<style>
+	body{
+	background-image: url("/img/main.jpg");
+	background-size: cover;
+	}
+	</style>
+<title>Insert title here</title>
+</head>
+<body>
+
+<div>
+<nav class="navbar navbar-inverse">
+  <div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Welcome</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        
+        <li>
+          <a th:href="@{/aboutUs}">About Us</a>
+          
+          
+        </li>
+        
+        <li>
+          <a th:href="@{/loadRegistrationForm}">Register Patient</a>
+          
+          
+        </li>
+        <li><a th:href="@{/loadAppointment}">Make an Appointment</a></li>
+         <li><a th:href="@{/loadDiagCenterForm}">Add DiagnosticCenter</a></li>
+         
+         <li><a th:href="@{/loadDiagTestRegistrationForm}">Add DiagnosticTest</a></li>
+          <li><a th:href="@{/loadTestResultForm}">Add TestResult</a></li>
+        <li><a href="#">Other</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a th:href="@{/login}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  </div>	
+</body>
+</html>

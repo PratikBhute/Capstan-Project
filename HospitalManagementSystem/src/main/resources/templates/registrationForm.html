@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  body{
+  background-image: url("/img/abc.jpg");
+  background-size: cover;
+ 
+  }
+  </style>
+
+
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container-fluid col-5 mt-5">
+<div>
+<h1>Patient Registration form</h1>
+</div>
+<div class="  border border-dark ">
+
+<div class="bordered mx-3 my-3"> 
+
+<form th:action="@{/savePatient}" th:object=
+
+ method="post">
+ 
+  <div class="mb-3 mt-3">
+    <label>Patient Name</label>
+    <input  type="text" class="form-control"  th:field="*{name}" placeholder="Enter patient Name" required>
+  </div>
+  
+  <div class="mb-3">
+    <label>Age</label>
+    <input type="number" class="form-control" th:field="*{age}" placeholder="Enter your age" required>
+  </div>
+  
+  <div class="mb-3">
+    <label>Contact No</label>
+    <input type="text" class="form-control" th:field="*{phoneNo}" placeholder="Enter your contact number" required>
+  </div>
+  
+  <div class="mb-3">
+    <label>Gender : </label>
+  <input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+    
+ 
+   <!--  <input type="text" class="form-control" th:field="*{gender}" placeholder="Enter your gender" required> -->
+  </div>
+  
+  
+ <!--  <select th:each="a:${ appoint2}">
+  <input type="text"  th:text="${a.name}">
+  </select> -->
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+   <!--  <a th:href="@{/home}"><button type="button" class="btn btn-success position-relative">Back</button></a> -->
+</form>
+</div>
+</div>
+</div>
+</div>
+<div>
+</body>
+</html>

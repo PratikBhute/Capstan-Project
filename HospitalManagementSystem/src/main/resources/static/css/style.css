@@ -1,0 +1,13 @@
+
+
+.imageRes{
+	background-image:url("/img/main.jpg");
+background-size: cover;
+	
+  }
+h2{
+	background-color: green;
+}
+.headingBold{
+	font-weight: bold;
+}
